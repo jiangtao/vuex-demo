@@ -1,0 +1,19 @@
+<Layout>
+   <div>
+   <Cell>
+      <input ref="input" autofocus slot="content" type="text" v-model="po.content" placeholder="add item" name="" id="">
+      <Buttons slot="label" size="large" @click="addItem">add</Buttons>
+    </Cell>
+    <ul class="todo__list">
+      <li v-for="(item, index) in listedTodos" class="todo__item">
+        <Cell>
+          <div @click="selectItem(index)" slot="content">
+            <Checkboxs :value="item.status" @input="updateItem"></Checkboxs>
+            <span class="todo__content">{{item.content}}</span>
+          </div>
+          <div slot="label" @click="remove(index)">x</div>
+        </Cell>
+      </li>
+    </ul>
+   </div>
+</Layout>
