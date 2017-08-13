@@ -45,7 +45,7 @@
     "webpack-merge": "^3.0.0"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.vue src",
+    "lint": "eslint --ext .js,.vue src build server",
     "start": "node server",
     "test": "rm -fr dist && ./node_modules/.bin/webpack --config ./build/webpack.test.conf.js --display-modules --display-chunks",
     "build": "rm -fr dist && ./node_modules/.bin/webpack --config ./build/webpack.prod.conf.js --display-modules --display-chunks"
